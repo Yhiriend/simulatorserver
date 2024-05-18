@@ -82,7 +82,6 @@ app.post('/catalogue', async (req, res) => {
     }
 });
 
-//============================================================================================================
 app.post('/processes', async (req, res) => {
     const { PID, name, user, description, priority, id_catalogue } = req.body;
     try {
@@ -136,7 +135,6 @@ app.get('/readTxtFile/:fileName', (req, res) => {
     });
 });
 
-//===========================================================================================================
 app.get('/catalogue', async (req, res) => {
     try {
         const catalogues = await Catalogue.findAll();
