@@ -99,13 +99,13 @@ app.post("/catalogue", async (req, res) => {
 
 app.post("/processes", async (req, res) => {
   const { PID, name, user, description, priority, id_catalogue } = req.body;
-  const descriptionSliced = description.slice(0, description.length - 2);
+  //const descriptionSliced = description.slice(0, description.length - 2);
   try {
     const newProcess = await Processes.create({
       PID,
       name,
       user,
-      description: descriptionSliced,
+      description,
       priority,
       id_catalogue,
     });
